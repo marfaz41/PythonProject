@@ -1,12 +1,22 @@
+temp = 28
+is_sunny = True
 
-unit = input("Is this temprature in celsius or fahremheight (C/F): ")
-temp = float(input("Enter the temprature: "))
+if temp >= 28 and is_sunny:
+    print("It is HOT outside")
+    print("It is SUNNY")
+elif temp <= 0 and is_sunny:
+    print("It is HOT outside")
+    print("It is SUNNY")
+elif 28 > temp > 0 and is_sunny:
+    print("It is HOT outside")
+    print("It is SUNNY")
+elif temp >= 28 and is_sunny:
+    print("It is COLD outside")
+    print("It is SUNNY")
+elif temp <= 0 and not is_sunny:
+    print("It is WARM outside")
+    print("It is SUNNY")
+elif 28 > temp > 0 and not is_sunny:
+    print("It is HOT outside")
+    print("It is CLOUDY ")
 
-if unit == "C":
-    temp = round((9 * temp) / 5 + 32, 1)
-    print(f"The temprature in fahremheight is: {temp}"f" ")
-elif unit == "F":
-    temp = round((temp - 32) * 5 / 9)
-    print(f"The temprature in celcius is: {temp}C")
-else:
-     print(f"{unit} is an invalid unit of measurement")
